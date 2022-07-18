@@ -1,0 +1,15 @@
+{
+    "name": "entretien",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "all": "node --no-warnings main.js",
+        "create": "node --no-warnings main.js post",
+        "read": "node --no-warnings main.js get",
+        "update": "node --no-warnings main.js patch",
+        "delete": "node --no-warnings main.js delete"
+    },
+    "author": "Thibault SACCON",
+    "license": "ISC"
+}
