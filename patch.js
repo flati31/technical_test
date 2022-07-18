@@ -1,52 +1,48 @@
+const axios = require('axios')
+
 /**
  * Update the title of the todo with id 1
  */
 async function updateTodoTitle() {
-    let resp = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
-        method: 'PATCH',
-        body: JSON.stringify({ title: 'New title' }),
-        headers: {
-            'Content-type': 'application/json',
-        },
-    });
-    let res = await resp.json();
-    console.log('Update the title of the todo with id 1 :');
-    console.log(res);
-    console.log();
+    try {
+        let resp = await axios.patch(
+            'https://jsonplaceholder.typicode.com/todos/1', { title: 'New title' });
+        console.log('Update the title of the todo with id 1 :');
+        console.log(resp.data);
+        console.log();
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 /**
  * Update the completed field of the todo with id 6
  */
 async function updateTodoCompleted() {
-    let resp = await fetch('https://jsonplaceholder.typicode.com/todos/6', {
-        method: 'PATCH',
-        body: JSON.stringify({ completed: true }),
-        headers: {
-            'Content-type': 'application/json',
-        },
-    });
-    let res = await resp.json();
-    console.log('Update the completed field of the todo with id 6 :');
-    console.log(res);
-    console.log();
+    try {
+        let resp = await axios.patch(
+            'https://jsonplaceholder.typicode.com/todos/6', { completed: true });
+        console.log('Update the completed field of the todo with id 6 :');
+        console.log(resp.data);
+        console.log();
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 /**
  * Update the username of the user with id 6
  */
 async function updateUserUsername() {
-    let resp = await fetch('https://jsonplaceholder.typicode.com/users/8', {
-        method: 'PATCH',
-        body: JSON.stringify({ username: 'It\'s me' }),
-        headers: {
-            'Content-type': 'application/json',
-        },
-    });
-    let res = await resp.json();
-    console.log('Update the username of the user with id 6 :');
-    console.log(res);
-    console.log();
+    try {
+        let resp = await axios.patch(
+            'https://jsonplaceholder.typicode.com/users/8', { username: 'It\'s me' });
+        console.log('Update the username of the user with id 6 :');
+        console.log(resp.data);
+        console.log();
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 async function execPatch() {

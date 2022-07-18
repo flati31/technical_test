@@ -4,12 +4,15 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-        "all": "node --no-warnings main.js",
-        "create": "node --no-warnings main.js post",
-        "read": "node --no-warnings main.js get",
-        "update": "node --no-warnings main.js patch",
-        "delete": "node --no-warnings main.js delete"
+        "all": "node main.js",
+        "create": "node main.js post",
+        "read": "node main.js get",
+        "update": "node main.js patch",
+        "delete": "node main.js delete"
     },
     "author": "Thibault SACCON",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.27.2"
+    }
 }
